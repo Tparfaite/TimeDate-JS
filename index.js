@@ -3,7 +3,7 @@ const container=document.getElementById("container");
 const todate=document.getElementById("todate");
 
 const years=new Date();
-console.log(years.toUTCString());
+// console.log(years.toUTCString());
 
 const months=["January","February","March","April","May","June","July","August","September","October","November","December"];
 const month=months[years.getMonth()];
@@ -18,7 +18,7 @@ const hour=years.getHours();
 const minute=years.getMinutes();
 const second=years.getSeconds();
 
-container.textContent=`${hour}:${minute}:${second}`;
+// container.textContent=`${hour}:${minute}:${second}`;
 todate.textContent=`${day},${month} ${date},${year}`;
 
 
@@ -28,8 +28,6 @@ setTimeout(()=>{
 },1000);
 container.textContent=`${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
 
-if(second <9) {
-    second= "0" +second;
-}
+
 }
 today();
